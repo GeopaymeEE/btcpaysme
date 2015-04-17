@@ -1,25 +1,25 @@
 {
-  "name": "copay",
+  "name": "btcpays",
   "description": "A multisignature wallet",
-  "author": "BitPay",
+  "author": "GeoPay",
   "version": "0.10.2",
   "keywords": [
     "wallet",
-    "copay",
+    "btcpays",
     "multisignature",
     "bitcoin",
     "bitcore"
   ],
   "main": "app.js",
   "id": "jid1-x7bV5evAaI1P9Q",
-  "homepage": "https://github.com/bitpay/copay",
+  "homepage": "https://github.com/GeopaymeEE/btcpaysme",
   "license": "MIT",
   "repository": {
-    "url": "git://github.com/bitpay/copay.git",
+    "url": "git://github.com/GeopaymeEE/btcpaysme.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/bitpay/copay/issues"
+    "url": "https://github.com/GeopaymeEE/btcpaysme/issues"
   },
   "dependencies": {
     "express": "^4.11.2",
