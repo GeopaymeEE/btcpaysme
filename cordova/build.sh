@@ -56,7 +56,7 @@ echo "Project directory is $PROJECT"
 if [ ! -d $PROJECT ]; then
   cd $BUILDDIR
   echo "${OpenColor}${Green}* Creating project... ${CloseColor}"
-  cordova create project com.bitpay.copay Copay
+  cordova create project me.geopay.btcpays btcpay
   checkOK
 
   cd $PROJECT
@@ -130,12 +130,12 @@ fi
 
 if $DBGJS
 then
-  echo "${OpenColor}${Green}* Generating copay bundle (debug js)...${CloseColor}"
+  echo "${OpenColor}${Green}* Generating btcpays bundle (debug js)...${CloseColor}"
   cd $BUILDDIR/..
   grunt
   checkOK
 else
-  echo "${OpenColor}${Green}* Generating copay bundle...${CloseColor}"
+  echo "${OpenColor}${Green}* Generating btcpays bundle...${CloseColor}"
   cd $BUILDDIR/..
   grunt prod
   checkOK
@@ -177,19 +177,19 @@ if [ $CURRENT_OS == "IOS" ]; then
   mkdir -p $PROJECT/platforms/ios
   checkOK
 
-  cp ios/Copay-Info.plist $PROJECT/platforms/ios/Copay-Info.plist
+  cp ios/btcpays-Info.plist $PROJECT/platforms/ios/btcpays-Info.plist
   checkOK
 
-  mkdir -p $PROJECT/platforms/ios/Copay/Resources/icons
+  mkdir -p $PROJECT/platforms/ios/btcpays/Resources/icons
   checkOK
 
-  mkdir -p $PROJECT/platforms/ios/Copay/Resources/splash
+  mkdir -p $PROJECT/platforms/ios/btcpays/Resources/splash
   checkOK
 
-  cp -R ios/icons/* $PROJECT/platforms/ios/Copay/Resources/icons
+  cp -R ios/icons/* $PROJECT/platforms/ios/btcpays/Resources/icons
   checkOK
 
-  cp -R ios/splash/* $PROJECT/platforms/ios/Copay/Resources/splash
+  cp -R ios/splash/* $PROJECT/platforms/ios/btcpays/Resources/splash
   checkOK
 fi
 
