@@ -29,14 +29,14 @@ wp8: project plugins
 
 ios: project plugins
 	make -C project ios
-	cp ios/Copay-Info.plist project/platforms/ios/Copay-Info.plist
-	mkdir -p project/platforms/ios/Copay/Resources/icons
-	mkdir -p project/platforms/ios/Copay/Resources/splash
-	cp -R ios/icons/* project/platforms/ios/Copay/Resources/icons
-	cp -R ios/splash/* project/platforms/ios/Copay/Resources/splash
+	cp ios/btcpays-Info.plist project/platforms/ios/btcpays-Info.plist
+	mkdir -p project/platforms/ios/btcpays/Resources/icons
+	mkdir -p project/platforms/ios/btcpays/Resources/splash
+	cp -R ios/icons/* project/platforms/ios/btcpays/Resources/icons
+	cp -R ios/splash/* project/platforms/ios/btcpays/Resources/splash
 
 open-ios: ios
-	open project/platforms/ios/Copay.xcodeproj
+	open project/platforms/ios/btcpays.xcodeproj
 
 run-android: android
 	make -C project run-android
