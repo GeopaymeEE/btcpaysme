@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.bitpay.copay" 
+<widget id="me.geopay.btcpays" 
   version="0.10.2"
   android-versionCode="28"
   ios-CFBundleVersion="0.10.2">
-    <name>Copay</name>
+    <name>btcPays</name>
     <description>
       A secure bitcoin wallet for friends and companies.
     </description>
-    <author email="support@bitpay.com" href="https://copay.io">
-        BitPay Inc.
+    <author email="support@geopay.me" href="https://geopay.me">
+        Geopay.me Inc.
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -23,7 +23,7 @@
     <preference name="BackupWebStorage" value="none"/>
     <preference name="windows-target-version" value="8.1"/>
     <feature name="App">
-      <param name="android-package" value="com.bitpay.copay" />
+      <param name="android-package" value="me.geopay.btcpays" />
     </feature>
     <feature name="WebIntent">
       <param name="android-package" value="com.borismus.webintent.WebIntent" />
