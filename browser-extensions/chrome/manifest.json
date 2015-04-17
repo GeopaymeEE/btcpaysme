@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Copay",
+  "name": "btcpays",
   "description": "A secure Bitcoin wallet for friends and companies",
   "version": "APP_VERSION",
   "permissions": [
