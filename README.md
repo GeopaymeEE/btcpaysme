@@ -4,13 +4,13 @@
 [![Coverage Status](https://img.shields.io/coveralls/bitpay/copay.svg)](https://coveralls.io/r/bitpay/copay?branch=master) 
 [![Stories in Ready](https://badge.waffle.io/bitpay/copay.svg?label=in progress&title=In progress)](https://waffle.io/bitpay/copay)
 
-*Copay* is an easy-to-use, open-source, multiplatform, multisignature, secure bitcoin wallet platform for both  individuals and companies. 
+*btcpays* is an easy-to-use, open-source, multiplatform, multisignature, secure bitcoin wallet platform for both  individuals and companies. 
 
-*Copay* uses Bitcore-Wallet-Service (https://github.com/bitpay/bitcore-wallet-service) for peer syncronization and bitcore network interfacing. 
+*btcpays* uses Bitcore-Wallet-Service (https://github.com/bitpay/bitcore-wallet-service) for peer syncronization and bitcore network interfacing. 
 
 ## Before you start
 
-Current Copay version is meant to be run on *mobile devices OR desktop application*, NOT browsers.
+Current btcpays version is meant to be run on *mobile devices OR desktop application*, NOT browsers.
 
 When running Copay as a web page, and a browser extension is enabled, the browser extension
 could have access to Copay internal data, and compromise the user's private key
@@ -19,8 +19,8 @@ and more.
 ## Installation
 
 ```sh
-git clone https://github.com/bitpay/copay.git
-cd copay
+git clone https://github.com/GeopaymeEE/btcpaysme.git
+cd btcpaysme
 ```
 
 Install [bower](http://bower.io/) and [grunt](http://gruntjs.com/getting-started) if you haven't already:
@@ -30,7 +30,7 @@ npm install -g bower
 npm install -g grunt-cli
 ```
 
-Build *Copay*:
+Build *btcpays*:
 
 ```sh
 bower install
@@ -44,7 +44,7 @@ For production environments:
 grunt prod
 ```
 
-Open *Copay*:
+Open *btcpays*:
 
 ```sh
 npm start
@@ -98,7 +98,7 @@ pyenv global 2.6.9
 
 ## Google Chrome App
 
-To build *Copay*'s Chrome App, run:
+To build *btcpays*'s Chrome App, run:
 
 ```sh
 npm run-script chrome
@@ -136,25 +136,25 @@ Expected: The app should login to the home screen after clicking login and show 
 Platform: Android 4.3, Android 4.4, iOS
 ```
 
-# About *Copay*
+# About *btcpays*
 
 ## General
 
-*Copay* implements a multisig wallet using [p2sh](https://en.bitcoin.it/wiki/Pay_to_script_hash) addresses. It supports multiple wallet, with with its own configuration, such as 3-of-5 (3 required signatures from 5 participant peers) or 2-of-3.  To create a multisig wallet shared between multiple participants, *Copay* requires the extended public keys of all the wallet participants.  Those public keys are then incorporated into the wallet configuration and combined to generate a payment address where funds can be sent into the wallet.  Conversely, each participant manages their own private key and that private key is never transmitted anywhere.
+*btcpays* implements a multisig wallet based on the *copay* code using [p2sh](https://en.bitcoin.it/wiki/Pay_to_script_hash) addresses. It supports multiple wallet, with with its own configuration, such as 3-of-5 (3 required signatures from 5 participant peers) or 2-of-3.  To create a multisig wallet shared between multiple participants, *Copay* requires the extended public keys of all the wallet participants.  Those public keys are then incorporated into the wallet configuration and combined to generate a payment address where funds can be sent into the wallet.  Conversely, each participant manages their own private key and that private key is never transmitted anywhere.
 
 To unlock a payment and spend the wallet's funds, a quorum of participant signatures must be collected and assembled in the transaction.  The funds cannot be spent without at least the minimum number of signatures required by the wallet configuration (2 of 3, 3 of 5, 6 of 6, etc).  Once a transaction proposal is created, the proposal is distributed among the wallet participants for each to sign the transaction locally.  Once the transaction is signed, the last signing participant will broadcast the transaction to the Bitcoin network.
 
-*Copay* also implements [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) to generate new addresses for peers.  The public key that each participant contributes to the wallet is a BIP32 extended public key.  As additional public keys are needed for wallet operations (to produce new addresses to receive payments into the wallet, for example) new public keys can be derived from the participants' original extended public keys.  Once again, it's important to stress that each participant keeps their own private keys locally - private keys are not shared - and are used to sign transaction proposals to make payments from the shared wallet.
+*btcpays* also implements [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) to generate new addresses for peers.  The public key that each participant contributes to the wallet is a BIP32 extended public key.  As additional public keys are needed for wallet operations (to produce new addresses to receive payments into the wallet, for example) new public keys can be derived from the participants' original extended public keys.  Once again, it's important to stress that each participant keeps their own private keys locally - private keys are not shared - and are used to sign transaction proposals to make payments from the shared wallet.
 
 For more information regarding how addresses are generated using this procedure, see: [Structure for Deterministic P2SH Multisignature Wallets](https://github.com/maraoz/bips/blob/master/bip-NNNN.mediawiki).
 
 ## Bitcore
 
-Copay uses the powerful and feature-rich [Bitcore](https://github.com/bitpay/bitcore) Javascript library for Bitcoin-related functions.  Bitcore should be built this way:
+btcPays uses the powerful and feature-rich [Bitcore](https://github.com/bitpay/bitcore) Javascript library for Bitcoin-related functions.  Bitcore should be built this way:
 
 ## Payment Protocol
 
-Copay currently supports [BIP70 (Payment Protocol)](https://github.com/bitcoin/bips/blob/master/bip-0070.mediawiki), with the following limitations:
+btcPays currently supports [BIP70 (Payment Protocol)](https://github.com/bitcoin/bips/blob/master/bip-0070.mediawiki), with the following limitations:
 * Only one output is allowed.  Payment requests that are more that one output are not supported.
 * Only standard Pay-to-pubkeyhash and Pay-to-scripthash scripts are supported (on payment requests).  Other script types will cause the entire payment request to be rejected.
 * Memos from the custormer to the server are not supported (i.e. there is no place to write messages to the server in the current UX)
